@@ -13,6 +13,7 @@
     "dev": "webpack-dev-server --mode=development --env.dev",
     "local": "webpack-dev-server --mode=development --env.local",
     "build": "rimraf ./dist && webpack --mode=production",
+    "prod": "webpack-dev-server --mode=production --env.prod=true --https --cert /etc/letsencrypt/live/smartexpo.smartlab.ba/cert.pem --key /etc/letsencrypt/live/smartexpo.smartlab.ba/privkey.pem",
     "prettier": "prettier --write '*.js' 'src/**/*.js'",
     "lint:js": "eslint '*.js' 'src/**/*.js'",
     "lint:html": "htmlhint 'src/**/*.html'",

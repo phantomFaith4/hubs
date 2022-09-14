@@ -253,7 +253,7 @@ module.exports = async (env, argv) => {
     }
   }
 
-  //Set env.production  and info about domain 
+  //custom  env.production  and info about domain 
 
   if (argv.mode === "production") {
     if (env.prodVps) {

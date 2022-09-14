@@ -253,6 +253,29 @@ module.exports = async (env, argv) => {
     }
   }
 
+  //Set env.production  and info about domain 
+
+  if (argv.mode === "production") {
+    if (env.prodVps) {
+        // Production on VPS
+        const domain = "smartexpo.smartlab.ba";
+      Object.assign(process.env, {
+        HOST_IP: domain,
+        SHORTLINK_DOMAIN: `${domain}`,
+        HOST: domain,
+        RETICULUM_SOCKET_SERVER: domain,
+        CORS_PROXY_SERVER: `${domain}`,
+        NON_CORS_PROXY_DOMAINS: `${domain},dev.reticulum.io`,
+        BASE_ASSETS_PATH: `https://${domain}:8080/`,
+        RETICULUM_SERVER: domain,
+        POSTGREST_SERVER: "",
+        ITA_SERVER: "",
+        UPLOADS_HOST: `https://${domain}`,
+      });
+    }
+  }
+
+
   // In production, the environment variables are defined in CI or loaded from ita and
   // the app config is injected into the head of the page by Reticulum.
 

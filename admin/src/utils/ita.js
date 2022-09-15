@@ -110,6 +110,7 @@ function fetchWithAuth(req) {
   console.log("Current TOKEN =>", currentAuthToken);
   console.log("OPTION OUT =>", options);
   return fetch(req, options);
+  //return fetch(req);
 }
 
 function getSchemas() {

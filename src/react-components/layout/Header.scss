@@ -25,14 +25,17 @@ header {
 
     li {
       &:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
         padding-top: 20px;
 
         @media(min-width: theme.$breakpoint-lg) {
           img {
             //width: 100%;
             //height: 100%;
-            width: 100px;
-            height: 50px;
+            width: 100%;
+            height: 5vh;
           }
         }
       }

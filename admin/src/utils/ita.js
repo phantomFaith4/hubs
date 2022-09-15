@@ -106,9 +106,6 @@ function fetchWithAuth(req) {
   options.headers = new Headers();
   options.headers.set("Authorization", `Bearer ${currentAuthToken}`);
   options.headers.set("Content-Type", "application/json");
-  console.log("REQ OUT =>",req);
-  console.log("Current TOKEN =>", currentAuthToken);
-  console.log("OPTION OUT =>", options);
   return fetch(req, options);
 }
 

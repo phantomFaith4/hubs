@@ -179,6 +179,8 @@ export function fetchReticulumAuthenticated(url, method = "GET", payload) {
     headers: { "content-type": "application/json" },
     method
   };
+  console.log("token=>",token);
+  console.log("retUrl=>",retUrl);
   if (token) {
     params.headers.authorization = `bearer ${token}`;
   }

@@ -203,6 +203,7 @@ class AvatarPreview extends Component {
   loadPreviewAvatar = async avatarGltfUrl => {
     let gltf;
     try {
+      console.log("Custom avater loading link",avatarGltfUrl,"avatar materials",ensureAvatarMaterial); 
       gltf = await loadGLTF(avatarGltfUrl, "model/gltf", "KHR_materials_unlit", null, ensureAvatarMaterial);
     } catch (e) {
       console.error("Failed to load avatar preview", e);

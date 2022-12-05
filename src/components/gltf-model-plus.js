@@ -638,6 +638,10 @@ class GLTFMozTextureRGBE {
 }
 
 export async function loadGLTF(src, contentType, onProgress, jsonPreprocessor) {
+  console.log("SRC GLTF =>", src);
+  console.log("SRC content type =>", contentType);
+  console.log("SRC  onProgress=>", onProgress);
+  console.log("SRC  jsnoPreprocessor=>", jsonPreprocessor);
   let gltfUrl = src;
   let fileMap;
 
